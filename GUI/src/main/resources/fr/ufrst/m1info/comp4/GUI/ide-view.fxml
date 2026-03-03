@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.fxmisc.flowless.*?>
+<?import org.fxmisc.richtext.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.ufrst.m1info.comp4.GUI.Controller">
+  <bottom>
+    <VBox fx:id="statusBarContainer" BorderPane.alignment="CENTER">
+      <children>
+        <HBox fx:id="statusBar" visible="false">
+          <children>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+              <children>
+                <Label text="Line:" textFill="#f5f5f5" />
+                <Label fx:id="lineNoLabel" layoutX="25.0" layoutY="14.0" text="1" textFill="#f5f5f5">
+                  <HBox.margin>
+                    <Insets left="2.0" />
+                  </HBox.margin>
+                </Label>
+                <Label layoutX="25.0" layoutY="14.0" text="," textFill="#f5f5f5">
+                  <HBox.margin>
+                    <Insets left="1.0" right="2.0" />
+                  </HBox.margin>
+                </Label>
+                <Label layoutX="56.0" layoutY="14.0" text="Col:" textFill="#f5f5f5">
+                  <HBox.margin>
+                    <Insets right="3.0" />
+                  </HBox.margin>
+                </Label>
+                <Label fx:id="colNoLabel" layoutX="76.0" layoutY="14.0" text="1" textFill="#f5f5f5" />
+                <Label fx:id="selectTextLabel" layoutX="106.0" layoutY="14.0" textFill="#f5f5f5">
+                  <HBox.margin>
+                    <Insets left="6.0" />
+                  </HBox.margin>
+                </Label>
+              </children>
+              <padding>
+                <Insets left="15.0" />
+              </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+              <children>
+                <Label text="Spaces:" textFill="WHITESMOKE" />
+                <Label fx:id="tabSizeLabel" layoutX="615.0" layoutY="14.0" text="8" textFill="WHITESMOKE">
+                  <HBox.margin>
+                    <Insets left="3.0" />
+                  </HBox.margin>
+                </Label>
+                <Label fx:id="fileTypeLabel" layoutX="584.0" layoutY="14.0" text="MiniJaja" textFill="WHITESMOKE">
+                  <HBox.margin>
+                    <Insets left="10.0" />
+                  </HBox.margin>
+                </Label>
+              </children>
+              <padding>
+                <Insets left="20.0" right="20.0" />
+              </padding>
+            </HBox>
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </bottom>
+   <center>
+    <SplitPane fx:id="splitPane" dividerPositions="0.8" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" style="-fx-padding: 0;" BorderPane.alignment="CENTER">
+      <items>
+            <SplitPane dividerPositions="0.7" minWidth="0.0" prefHeight="160.0" prefWidth="200.0">
+              <items>
+              <TabPane fx:id="tabPane" prefHeight="413.0" prefWidth="82.0" />
+                  <SplitPane dividerPositions="0.5" minWidth="0.0" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                        <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0">
+                           <center>
+                               <VirtualizedScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                  <content>
+                                      <CodeArea fx:id="compileJajacode" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="387.0" prefWidth="156.0" BorderPane.alignment="CENTER" />
+                                  </content>
+                              </VirtualizedScrollPane>
+                           </center>
+                           <top>
+                              <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" styleClass="titleWindows">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" minWidth="0.0" text="JajaCode" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Button alignment="CENTER" minWidth="0.0" mnemonicParsing="false" text="✖" visible="false" />
+                                 </children>
+                              </HBox>
+                           </top>
+                        </BorderPane>
+                        <SplitPane dividerPositions="0.7" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                          <items>
+                              <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0">
+                                  <center>
+                                      <VirtualizedScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                          <content>
+                                              <CodeArea fx:id="outputStack" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="387.0" prefWidth="123.0" BorderPane.alignment="CENTER" />
+                                          </content>
+                                      </VirtualizedScrollPane>
+                                  </center>
+                                 <top>
+                                    <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" styleClass="titleWindows">
+                                                <children>
+                                                    <Label maxWidth="1.7976931348623157E308" minWidth="0.0" styleClass="titleWindows" text="Memory" HBox.hgrow="ALWAYS">
+                                                        <font>
+                                                            <Font size="14.0" />
+                                                        </font>
+                                                        <HBox.margin>
+                                                            <Insets left="4.0" />
+                                                        </HBox.margin>
+                                                    </Label>
+                                                    <Button alignment="CENTER" minWidth="0.0" mnemonicParsing="false" text="✖" visible="false" />
+                                                </children>
+                                            </HBox>
+                                              <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" styleClass="subTitleMemory">
+                                                  <children>
+                                                      <Label maxWidth="1.7976931348623157E308" minWidth="0.0" text="Stack" HBox.hgrow="ALWAYS">
+                                                          <font>
+                                                              <Font size="14.0" />
+                                                          </font>
+                                                          <HBox.margin>
+                                                              <Insets left="4.0" />
+                                                          </HBox.margin>
+                                                      </Label>
+                                                      <Button alignment="CENTER" minWidth="0.0" mnemonicParsing="false" text="✖" visible="false" />
+                                                  </children>
+                                              </HBox>
+                                       </children>
+                                    </VBox>
+                                 </top>
+                              </BorderPane>
+                              <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0">
+                                 <center>
+                                    <VirtualizedScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                                       <content>
+                                          <CodeArea fx:id="outputHeap" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="387.0" prefWidth="123.0" BorderPane.alignment="CENTER" />
+                                       </content>
+                                    </VirtualizedScrollPane>
+                                 </center>
+                                 <top>
+                                    <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="0.0" styleClass="titleWindows">
+                                       <children>
+                                          <Label maxWidth="1.7976931348623157E308" minWidth="0.0" prefHeight="24.0" prefWidth="51.0" styleClass="subTitleMemory" text="Heap" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="4.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </top>
+                              </BorderPane>
+                          </items>
+                        </SplitPane>
+                    </items>
+                  </SplitPane>
+              </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" minHeight="0.0">
+               <items>
+                  <BorderPane minHeight="0.0" prefHeight="100.0">
+                     <center>
+                         <VirtualizedScrollPane fx:id="outputMinijajaScrollPane">
+                            <content>
+                            <CodeArea fx:id="outputMinijaja" editable="false" wrapText="true" BorderPane.alignment="CENTER" />
+                            </content>
+                        </VirtualizedScrollPane>
+                     </center>
+                     <top>
+                        <HBox prefHeight="24.0" prefWidth="197.0" styleClass="titleWindows" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label prefHeight="35.0" prefWidth="193.0" text="Output MiniJaja">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                      <center>
+                          <VirtualizedScrollPane fx:id="outputJajacodeScrollPane">
+                            <content>
+                                <CodeArea fx:id="outputJajacode" editable="false" wrapText="true" BorderPane.alignment="CENTER" />
+                            </content>
+                            </VirtualizedScrollPane>
+                      </center>
+                     <top>
+                        <HBox prefHeight="24.0" prefWidth="197.0" styleClass="titleWindows" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label prefHeight="52.0" prefWidth="254.0" text="Output JajaCode">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+               </items>
+            </SplitPane>
+      </items>
+      </SplitPane>
+   </center>
+   <top>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+          <MenuBar>
+            <menus>
+              <Menu mnemonicParsing="false" text="File">
+                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newFile" text="New File">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open File">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#saveAsFile" text="Save as">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                    </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#closeSelectedTab" text="Close Tab">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Edit">
+                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#redo" text="Redo">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="Y" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#cut" text="Cut">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#copy" text="Copy">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#paste" text="Paste">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="V" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#find" text="Find">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#replace" text="Replace">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Selection">
+                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#selectAll" text="Select All">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#copyLineUp" text="Copy line up">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#copyLineDown" text="Copy line down">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#moveLineUp" text="Move line up">
+                    <accelerator>
+                      <KeyCodeCombination alt="DOWN" code="UP" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#moveLineDown" text="Move line down">
+                    <accelerator>
+                      <KeyCodeCombination alt="DOWN" code="DOWN" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#duplicateSelection" text="Duplicate Selection" />
+                </items>
+              </Menu>
+              <Menu mnemonicParsing="false" text="Tools">
+                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#help" text="Help">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="H" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#changeTheme" text="Change Color Theme">
+                    <accelerator>
+                      <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                    </accelerator>
+                  </MenuItem>
+                </items>
+              </Menu>
+                  <Menu mnemonicParsing="false" text="Run">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#compileToJaJaCode" text="Compile to Jajacode">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F3" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <Menu mnemonicParsing="false" text="Run">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#runMinijaja" text="Run MiniJaja">
+                                   <accelerator>
+                                      <KeyCodeCombination alt="UP" code="F1" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                   </accelerator>
+                                </MenuItem>
+                                <MenuItem mnemonicParsing="false" onAction="#runJajacode" text="Run JajaCode">
+                                   <accelerator>
+                                      <KeyCodeCombination alt="UP" code="F2" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                   </accelerator>
+                                </MenuItem>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Debug">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#debugMinijaja" text="Debug MiniJaja">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="F4" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#debugJajacode" text="Debug JajaCode">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="F5" control="UP" meta="UP" shift="DOWN" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                          </items>
+                        </Menu>
+                    </items>
+                  </Menu>
+            </menus>
+          </MenuBar>
+            <HBox>
+               <children>
+                  <ToolBar fx:id="toolbarDebug" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                    <items>
+                        <HBox fx:id="buttonsDebug" alignment="CENTER" maxWidth="1.7976931348623157E308" style="-fx-border-color: #454545; -fx-border-width: 0 2px 0 0;" visible="false">
+                           <children>
+                               <Button fx:id="btnDebugStep" mnemonicParsing="false" onAction="#debuggerStep" text="↓">
+                                 <tooltip>
+                                   <Tooltip text="Step" />
+                                 </tooltip>
+                               </Button>
+                               <Button fx:id="btnDebugContinue" mnemonicParsing="false" onAction="#debuggerContinue" text="↴">
+                                 <tooltip>
+                                    <Tooltip text="Continue" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="btndebugStop" mnemonicParsing="false" onAction="#debugStop" text="✖" textFill="RED">
+                                 <tooltip>
+                                    <Tooltip text="Stop" />
+                                 </tooltip>
+                              </Button>
+                              <Label fx:id="debugLabel" prefHeight="16.0" prefWidth="188.0">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin></Label>
+                           </children>
+                        </HBox>
+                      <HBox fx:id="containerFind" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="490.0" stylesheets="@./stylesheets/dark_theme.css" visible="false" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+                        <children>
+                          <HBox alignment="CENTER" onMouseClicked="#toggleReplace" prefHeight="41.0" prefWidth="37.0" styleClass="hover_white">
+                            <HBox.margin>
+                              <Insets right="11.0" />
+                            </HBox.margin>
+                            <children>
+                              <Label text="&gt;">
+                                <tooltip>
+                                  <Tooltip text="Show Replace field" />
+                                </tooltip>
+                              </Label>
+                            </children>
+                          </HBox>
+                          <VBox alignment="CENTER_LEFT" prefWidth="431.0" HBox.hgrow="ALWAYS">
+                            <children>
+                              <HBox fx:id="findBox" alignment="CENTER_LEFT" prefWidth="200.0" translateY="14.0">
+                                <children>
+                                  <TextField fx:id="findInput" onAction="#findWord" prefHeight="32.0" prefWidth="245.0" promptText="Find" styleClass="find_input">
+                                    <HBox.margin>
+                                      <Insets right="7.0" />
+                                    </HBox.margin>
+                                  </TextField>
+                                  <Label fx:id="currIndexLabel" text="0">
+                                    <font>
+                                      <Font size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                      <Insets right="2.0" />
+                                    </HBox.margin>
+                                  </Label>
+                                  <Label text="/">
+                                    <font>
+                                      <Font size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                      <Insets right="2.0" />
+                                    </HBox.margin>
+                                  </Label>
+                                  <Label fx:id="totalIndexLabel" text="0">
+                                    <font>
+                                      <Font size="16.0" />
+                                    </font>
+                                    <HBox.margin>
+                                      <Insets left="2.0" />
+                                    </HBox.margin>
+                                  </Label>
+                                  <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="124.0" HBox.hgrow="ALWAYS">
+                                    <children>
+                                      <Button mnemonicParsing="false" onAction="#prevWord" style="-fx-background-color: none;" text="↑">
+                                        <tooltip>
+                                          <Tooltip text="Previous Occurence" />
+                                        </tooltip>
+                                      </Button>
+                                      <Button layoutX="145.0" layoutY="16.0" mnemonicParsing="false" onAction="#nextWord" style="-fx-background-color: none;" text="↓">
+                                        <tooltip>
+                                          <Tooltip text="Next Occurence" />
+                                        </tooltip>
+                                      </Button>
+                                      <Button layoutX="145.0" layoutY="16.0" mnemonicParsing="false" onAction="#closeFind" style="-fx-background-color: none; -fx-text-fill: #FF0000" text="✖" textFill="RED">
+                                        <tooltip>
+                                          <Tooltip text="Close" />
+                                        </tooltip>
+                                      </Button>
+                                    </children>
+                                    <padding>
+                                      <Insets right="5.0" />
+                                    </padding>
+                                  </HBox>
+                                </children>
+                              </HBox>
+                              <HBox fx:id="replaceBox" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" translateY="42.0" visible="false">
+                                <children>
+                                  <TextField fx:id="replaceInput" prefHeight="32.0" prefWidth="245.0" promptText="Replace" styleClass="findInput">
+                                    <HBox.margin>
+                                      <Insets right="7.0" />
+                                    </HBox.margin>
+                                  </TextField>
+                                  <Button mnemonicParsing="false" onAction="#replaceWord" prefWidth="75.0" text="Replace">
+                                    <HBox.margin>
+                                      <Insets right="4.0" />
+                                    </HBox.margin>
+                                  </Button>
+                                  <Button layoutX="250.0" layoutY="15.0" mnemonicParsing="false" onAction="#replaceAll" text="Replace All" />
+                                </children>
+                              </HBox>
+                            </children>
+                            <HBox.margin>
+                              <Insets top="4.0" />
+                            </HBox.margin>
+                          </VBox>
+                        </children>
+                      </HBox>
+                    </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.ufrst.m1info.comp4.GUI.AcceptanceTest" time="0.124" tests="6" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/GUI/target/test-classes:/home/anthony/.m2/repository/org/openjfx/javafx-controls/19/javafx-controls-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-graphics/19/javafx-graphics-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-base/19/javafx-base-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-fxml/19/javafx-fxml-19.jar:/home/anthony/.m2/repository/org/fxmisc/undo/undofx/2.1.1/undofx-2.1.1.jar:/home/anthony/.m2/repository/org/fxmisc/wellbehaved/wellbehavedfx/0.3.3/wellbehavedfx-0.3.3.jar:/home/anthony/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/anthony/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/anthony/.m2/repository/org/mockito/mockito-core/3.12.1/mockito-core-3.12.1.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/home/anthony/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/home/anthony/.jdks/corretto-17.0.8.1/lib"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /home/anthony/Documents/M1/s7/comp-and-interpretation-project/GUI/target/surefire 2024-10-26T16-40-08_833-jvmRun1 surefire-20241026164014917_16tmp surefire_5-20241026164014917_17tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/GUI/target/test-classes:/home/anthony/.m2/repository/org/openjfx/javafx-controls/19/javafx-controls-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-graphics/19/javafx-graphics-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-base/19/javafx-base-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-fxml/19/javafx-fxml-19.jar:/home/anthony/.m2/repository/org/fxmisc/undo/undofx/2.1.1/undofx-2.1.1.jar:/home/anthony/.m2/repository/org/fxmisc/wellbehaved/wellbehavedfx/0.3.3/wellbehavedfx-0.3.3.jar:/home/anthony/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/anthony/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/anthony/.m2/repository/org/mockito/mockito-core/3.12.1/mockito-core-3.12.1.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/home/anthony/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/anthony"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="jdk.module.path" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/GUI/target/classes:/home/anthony/.m2/repository/org/openjfx/javafx-controls/19/javafx-controls-19-linux.jar:/home/anthony/.m2/repository/org/openjfx/javafx-graphics/19/javafx-graphics-19-linux.jar:/home/anthony/.m2/repository/org/openjfx/javafx-base/19/javafx-base-19-linux.jar:/home/anthony/.m2/repository/org/openjfx/javafx-fxml/19/javafx-fxml-19-linux.jar:/home/anthony/.m2/repository/org/fxmisc/richtext/richtextfx/0.10.9/richtextfx-0.10.9.jar:/home/anthony/.m2/repository/org/reactfx/reactfx/2.0-M5/reactfx-2.0-M5.jar:/home/anthony/.m2/repository/org/fxmisc/flowless/flowless/0.6.9/flowless-0.6.9.jar:/home/anthony/Documents/M1/s7/comp-and-interpretation-project/compiler/target/compiler-1.1-SNAPSHOT.jar:/home/anthony/Documents/M1/s7/comp-and-interpretation-project/parser/target/parser-1.1-SNAPSHOT.jar:/home/anthony/Documents/M1/s7/comp-and-interpretation-project/interpreter/target/interpreter-1.1-SNAPSHOT.jar:/home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory/target/memory-1.1-SNAPSHOT.jar:/home/anthony/Documents/M1/s7/comp-and-interpretation-project/typeChecker/target/typeChecker-1.1-SNAPSHOT.jar:/home/anthony/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar"/>
+    <property name="java.version.date" value="2023-08-22"/>
+    <property name="java.home" value="/home/anthony/.jdks/corretto-17.0.8.1"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/GUI"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-booter/3.0.0-M7/surefire-booter-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-api/3.0.0-M7/surefire-api-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-logger-api/3.0.0-M7/surefire-logger-api-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-shared-utils/3.0.0-M7/surefire-shared-utils-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-extensions-spi/3.0.0-M7/surefire-extensions-spi-3.0.0-M7.jar:/home/anthony/Documents/M1/s7/comp-and-interpretation-project/GUI/target/test-classes:/home/anthony/.m2/repository/org/openjfx/javafx-controls/19/javafx-controls-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-graphics/19/javafx-graphics-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-base/19/javafx-base-19.jar:/home/anthony/.m2/repository/org/openjfx/javafx-fxml/19/javafx-fxml-19.jar:/home/anthony/.m2/repository/org/fxmisc/undo/undofx/2.1.1/undofx-2.1.1.jar:/home/anthony/.m2/repository/org/fxmisc/wellbehaved/wellbehavedfx/0.3.3/wellbehavedfx-0.3.3.jar:/home/anthony/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/anthony/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/anthony/.m2/repository/org/mockito/mockito-core/3.12.1/mockito-core-3.12.1.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/home/anthony/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.8.1+8-LTS"/>
+    <property name="user.name" value="anthony"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-47-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-17.0.8.8.1"/>
+    <property name="localRepository" value="/home/anthony/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2024.2.4"/>
+    <property name="java.version" value="17.0.8.1"/>
+    <property name="user.dir" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/GUI"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.8.1+8-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="tasTest" classname="fr.ufrst.m1info.comp4.GUI.AcceptanceTest" time="0.052"/>
+  <testcase name="quickSortTest" classname="fr.ufrst.m1info.comp4.GUI.AcceptanceTest" time="0.02"/>
+  <testcase name="synonymieTest" classname="fr.ufrst.m1info.comp4.GUI.AcceptanceTest" time="0.004"/>
+  <testcase name="unMJJTest" classname="fr.ufrst.m1info.comp4.GUI.AcceptanceTest" time="0.003"/>
+  <testcase name="factTest" classname="fr.ufrst.m1info.comp4.GUI.AcceptanceTest" time="0.003"/>
+  <testcase name="unJJCTest" classname="fr.ufrst.m1info.comp4.GUI.AcceptanceTest" time="0.005"/>
+</testsuite>
