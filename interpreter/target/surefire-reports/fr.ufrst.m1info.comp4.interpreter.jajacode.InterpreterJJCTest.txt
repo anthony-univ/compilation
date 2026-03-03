@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: fr.ufrst.m1info.comp4.interpreter.jajacode.InterpreterJJCTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in fr.ufrst.m1info.comp4.interpreter.jajacode.InterpreterJJCTest

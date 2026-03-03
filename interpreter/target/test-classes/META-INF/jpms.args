@@ -1,4 +1,0 @@
---patch-module
-interpreter=_
---add-reads
-interpreter=ALL-UNNAMED
