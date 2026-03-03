@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="fr.ufrst.m1info.comp4.memory.InfoIdentTest" time="0" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory/target/test-classes:/home/anthony/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/anthony/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/anthony/.m2/repository/org/mockito/mockito-core/3.12.1/mockito-core-3.12.1.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/home/anthony/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="/home/anthony/.jdks/corretto-17.0.8.1/lib"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory/target/surefire 2024-10-26T16-40-08_833-jvmRun1 surefire-20241026164011997_7tmp surefire_2-20241026164011997_8tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory/target/test-classes:/home/anthony/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/anthony/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/anthony/.m2/repository/org/mockito/mockito-core/3.12.1/mockito-core-3.12.1.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/home/anthony/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/anthony"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="jdk.module.path" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory/target/classes"/>
+    <property name="java.version.date" value="2023-08-22"/>
+    <property name="java.home" value="/home/anthony/.jdks/corretto-17.0.8.1"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-booter/3.0.0-M7/surefire-booter-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-api/3.0.0-M7/surefire-api-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-logger-api/3.0.0-M7/surefire-logger-api-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-shared-utils/3.0.0-M7/surefire-shared-utils-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-extensions-spi/3.0.0-M7/surefire-extensions-spi-3.0.0-M7.jar:/home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory/target/test-classes:/home/anthony/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/home/anthony/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/anthony/.m2/repository/org/mockito/mockito-core/3.12.1/mockito-core-3.12.1.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy/1.11.13/byte-buddy-1.11.13.jar:/home/anthony/.m2/repository/net/bytebuddy/byte-buddy-agent/1.11.13/byte-buddy-agent-1.11.13.jar:/home/anthony/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/surefire-junit4/3.0.0-M7/surefire-junit4-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/common-java5/3.0.0-M7/common-java5-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/common-junit3/3.0.0-M7/common-junit3-3.0.0-M7.jar:/home/anthony/.m2/repository/org/apache/maven/surefire/common-junit4/3.0.0-M7/common-junit4-3.0.0-M7.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.8.1+8-LTS"/>
+    <property name="user.name" value="anthony"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-47-generic"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-17.0.8.8.1"/>
+    <property name="localRepository" value="/home/anthony/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="idea.version" value="2024.2.4"/>
+    <property name="java.version" value="17.0.8.1"/>
+    <property name="user.dir" value="/home/anthony/Documents/M1/s7/comp-and-interpretation-project/memory"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.8.1+8-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="objTest" classname="fr.ufrst.m1info.comp4.memory.InfoIdentTest" time="0"/>
+  <testcase name="sorteTest" classname="fr.ufrst.m1info.comp4.memory.InfoIdentTest" time="0"/>
+</testsuite>
