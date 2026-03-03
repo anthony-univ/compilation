@@ -1,0 +1,15 @@
+classe
+	ident
+		C@global
+	decls
+		methode
+			rien
+			ident
+				f->none@class
+			enil
+			vnil
+			inil
+		vnil
+	main
+		vnil
+		inil

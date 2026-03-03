@@ -1,0 +1,4 @@
+--patch-module
+typeChecker=_
+--add-reads
+typeChecker=ALL-UNNAMED
