@@ -1,0 +1,15 @@
+1 init;
+2 push(4);
+3 new(a,entier,var,0);
+4 load(a);
+5 push(6);
+6 sup;
+7 if(9);
+8 goto(11);
+9 push(1);
+10 inc(a);
+11 push(0);
+12 swap;
+13 pop;
+14 pop;
+15 jcstop;

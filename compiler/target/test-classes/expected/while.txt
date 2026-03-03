@@ -1,0 +1,17 @@
+1 init;
+2 push(faux);
+3 new(b,booleen,var,0);
+4 load(b);
+5 not;
+6 not;
+7 if(13);
+8 load(b);
+9 write;
+10 push("in while");
+11 writeln;
+12 goto(4);
+13 push(0);
+14 swap;
+15 pop;
+16 pop;
+17 jcstop;

@@ -1,0 +1,4 @@
+--patch-module
+compiler=_
+--add-reads
+compiler=ALL-UNNAMED
